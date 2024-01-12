@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo ${{github.event.pull_request}}
+        run: echo ${{github.event.pull_request.merged}}
       - id: step2
         run: echo ${{github.ref}}
         
