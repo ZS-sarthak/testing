@@ -19,5 +19,5 @@ jobs:
         
   job2: 
      needs: job1
-     if: (github.event.pull_request.merged)
+     if: (github.event.pull_request.merged) && (github.ref == 'refs/heads/development')
      uses: ./.github/workflows/cd.yml
