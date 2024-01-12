@@ -8,3 +8,9 @@ on:
   pull_request:
     types: [ opened, edited, reopened ]
 
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: echo "test=hello"
