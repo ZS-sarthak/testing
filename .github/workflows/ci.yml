@@ -18,4 +18,4 @@ jobs:
   job2: 
      needs: job1
      if: (github.event.workflow_run.conclusion == 'success') && (github.event.pull_request.merged)
-     uses: .github/workflows/cd.yml@main
+     uses: ./.github/workflows/cd.yml
