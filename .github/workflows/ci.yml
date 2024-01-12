@@ -1,7 +1,6 @@
 name: Build
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -15,3 +14,8 @@ jobs:
     steps:
       - id: step1
         run: echo "test=hello"
+        
+  job2: 
+     needs: job1
+     if: (github.event.workflow_run.conclusion == 'success') && (github.event.pull_request.merged)
+     uses: .github/workflows/cd.yml@main
