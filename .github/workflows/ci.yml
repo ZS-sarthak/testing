@@ -6,7 +6,10 @@ on:
       - 'main'
       - 'development'
   pull_request:
-    types: [ opened, edited, reopened ]
+    branches:
+      - 'main'
+      - 'development'
+    types: [ opened, edited, reopened, merged ]
 
 jobs:
   job1:
