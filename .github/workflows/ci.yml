@@ -8,21 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo `${{ github.workflow }}`
+        run: echo `${{ github.action_path }}`
       - id: step2
-        run: echo `${{ github.workflow.ref }}`
+        run: echo `${{ github.action_ref }}`
       - id: step3
-        run: echo `${{ github.ref }}`
+        run: echo `${{ github.base_ref }}`
       - id: step4
-        run: echo `${{ github.ref.type }}`
+        run: echo `${{ github.event }}`
       - id: step5
-        run: echo `${{ github.action }}`
+        run: echo `${{ github.event_path }}`
       - id: step6
-        run: echo `${{ github.action.path }}`
+        run: echo `${{ github.head_ref }}`
       - id: step7
-        run: echo "$GITHUB_CONTEXT"
+        run: echo ${{ github.path }}
       - id: step8
-        run: echo ${{ github.repository }}
+        run: echo ${{ github.workflow_ref }}
         
   job2: 
      needs: job1
