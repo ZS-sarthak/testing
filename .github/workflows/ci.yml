@@ -1,23 +1,14 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - 'main'
-      - 'development'
-  pull_request:
-    branches:
-      - 'main'
-      - 'development'
+  workflow_call:
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo ${{github.event.pull_request.merged}}
-      - id: step2
-        run: echo ${{github.ref}}
+        run: echo 'v1'
         
   # job2: 
   #    needs: job1
