@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo ${{ github.workflow.ref }}
+        run: echo `${{ github.ref }}`
+      - id: step2
+        run: echo `${{ github.workflow }}`
+      - id: step3
+        run: echo `${{ github.ref }}`
+      - id: step4
+        run: echo `${{ github.ref.type }}`
         
   job2: 
      needs: job1
