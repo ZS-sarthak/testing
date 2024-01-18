@@ -8,13 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo `${{ github.ref }}`
-      - id: step2
         run: echo `${{ github.workflow }}`
+      - id: step2
+        run: echo `${{ github.workflow.ref }}`
       - id: step3
         run: echo `${{ github.ref }}`
       - id: step4
         run: echo `${{ github.ref.type }}`
+      - id: step5
+        run: echo `${{ github.action }}`
+      - id: step6
+        run: echo `${{ github.action.path }}`
+      - id: step7
+        run: echo "$GITHUB_CONTEXT"
         
   job2: 
      needs: job1
