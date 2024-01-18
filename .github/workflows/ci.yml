@@ -10,13 +10,6 @@ jobs:
       - id: step1
         run: echo 'v1'
         
-  # job2: 
-  #    needs: job1
-  #    steps:
-  #     - id: step1
-  #       run: echo (github.event.pull_request.merged)
-  #     - id: step1
-  #       run: echo (github.event.pull_request.merged)
-    
-  #    run: (github.event.pull_request.merged) && (github.ref == 'refs/heads/main')
-  #    uses: ./.github/workflows/cd.yml
+  job2: 
+     needs: job1
+     uses: ./.github/workflows/cd.yml
