@@ -21,6 +21,8 @@ jobs:
         run: echo `${{ github.action.path }}`
       - id: step7
         run: echo "$GITHUB_CONTEXT"
+      - id: step8
+        run: echo ${{ github.repository }}
         
   job2: 
      needs: job1
