@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo 'v1'
+        run: echo 'v2'
         
   job2: 
      needs: job1
