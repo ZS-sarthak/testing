@@ -7,5 +7,11 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a script
-        uses: ./github/scripts/test.sh
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        repository: ZS-sarthak/testing 
+        ref: main
+        
+    - name: Run a script
+      run: bash ./github/scripts/test.sh
