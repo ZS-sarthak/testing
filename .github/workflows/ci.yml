@@ -6,9 +6,6 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./scripts
     steps:
       - name: Run a script
-        run: ./test.sh
+        uses: ./github/scripts/test.sh
