@@ -6,6 +6,9 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
-      - id: step1
-        run: bash ./github/scripts/test.sh
+      - name: Run a script
+        run: ./test.sh
