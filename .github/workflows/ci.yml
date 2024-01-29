@@ -13,9 +13,6 @@ jobs:
         repository: ZS-sarthak/testing 
         ref: main    
         
-    - name: Change to repo-b directory
-      run: cd testing
-        
     - name: Run a script
       run: |
         cd /home/runner/work/testing/testing
