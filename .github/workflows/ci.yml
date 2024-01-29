@@ -18,6 +18,7 @@ jobs:
         
     - name: Run a script
       run: |
+        cd /home/runner/work/testing/testing
         pwd
         ls
         bash ./github/scripts/test.sh
