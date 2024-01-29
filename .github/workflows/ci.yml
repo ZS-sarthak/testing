@@ -14,4 +14,7 @@ jobs:
         ref: main
         
     - name: Run a script
-      run: bash ./github/scripts/test.sh
+      run: |
+        pwd
+        ls
+        bash ./github/scripts/test.sh
